@@ -134,6 +134,14 @@
     return self;
 }
 
+- (id)initWithBucket:(NSString *)bucketName accessKey:(NSString *)accessKey secretKey:(NSString *)secretKey {
+    return [self initWithBucket:bucketName action:nil parameters:nil accessKey:accessKey secretKey:secretKey];
+}
+
+- (id)initWithAccessKey:(NSString *)accessKey secretKey:(NSString *)secretKey {
+    return [self initWithBucket:nil action:nil parameters:nil accessKey:accessKey secretKey:secretKey];
+}
+
 - (NSString *)dateHeader {
     return [BS3Request dateHeaderForDate:[NSDate date]];
 }

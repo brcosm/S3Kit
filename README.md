@@ -9,7 +9,9 @@ S3Kit is a static library and is best included as a sub-module of your app's Git
 
 ## Example Usage ##
 
-Coming soon.  Basically, just initialize the request and plug it into a NSURLConnection.
+    BS3Request * request = [[BS3Request alloc] initWithAccessKey:@"KEYHERE" secretKey:@"KEYHERE"];
+	NSData *data = [NSURLConnection sendSynchronousRequest:request ...];
+	
 I will be updating the header files with documentation, check out the tests for some examples of different inputs.
 
 [s3_rest_api]:http://docs.amazonwebservices.com/AmazonS3/latest/API/APIRest.html
