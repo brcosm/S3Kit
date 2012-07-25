@@ -20,8 +20,8 @@
 /**
  Initialize a new BS3Request object
  @param bucketName The name of the bucket to perform the request on or nil
- @param actionName The name of the action to perform see http://docs.amazonwebservices.com/AmazonS3/latest/API/RESTBucketOps.html
- @param params The dictionary of special request parameters to use see http://docs.amazonwebservices.com/AmazonS3/latest/API/RESTBucketGET.html#RESTBucketGET-requests-request-parameters
+ @param actionName The name of the action to perform @see http://docs.amazonwebservices.com/AmazonS3/latest/API/RESTBucketOps.html
+ @param params The dictionary of special request parameters to use @see http://docs.amazonwebservices.com/AmazonS3/latest/API/RESTBucketGET.html#RESTBucketGET-requests-request-parameters
  @param accessKey The Amazon AWS access key to be used to sign the request
  @param secretKey The Amazon AWS secret key to be used to sign the request
  @return a newly initialized NSURLRequest subclass with a signed URL

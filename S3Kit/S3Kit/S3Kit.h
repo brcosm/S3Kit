@@ -7,3 +7,4 @@
 //
 
 #import <S3Kit/BS3Request.h>
+#import <S3Kit/BS3Response.h>

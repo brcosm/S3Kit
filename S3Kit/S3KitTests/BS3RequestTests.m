@@ -112,5 +112,4 @@
     STAssertEqualObjects([bucketRequest authorizationHeader], testAuthorizationHeader, @"the authorization header should match the expected format");
 }
 
-
 @end

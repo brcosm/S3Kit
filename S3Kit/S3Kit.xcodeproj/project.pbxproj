@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		685E1F9F15BF91130074250A /* BS3Response.h in Headers */ = {isa = PBXBuildFile; fileRef = 685E1F9B15BF91130074250A /* BS3Response.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		685E1FA015BF91130074250A /* BS3Response.m in Sources */ = {isa = PBXBuildFile; fileRef = 685E1F9C15BF91130074250A /* BS3Response.m */; };
+		685E1FA115BF91130074250A /* BS3Response.m in Sources */ = {isa = PBXBuildFile; fileRef = 685E1F9C15BF91130074250A /* BS3Response.m */; };
+		685E1FA215BF91130074250A /* BS3Parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 685E1F9D15BF91130074250A /* BS3Parser.h */; };
+		685E1FA315BF91130074250A /* BS3Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 685E1F9E15BF91130074250A /* BS3Parser.m */; };
+		685E1FA415BF91130074250A /* BS3Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 685E1F9E15BF91130074250A /* BS3Parser.m */; };
+		685E1FA815BF91350074250A /* BS3ResponseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 685E1FA715BF91350074250A /* BS3ResponseTests.m */; };
+		685E1FAB15BF91500074250A /* BS3ParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 685E1FAA15BF91500074250A /* BS3ParserTests.m */; };
+		685E1FAC15BF92C00074250A /* S3Kit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6897DC9415BEF65F0020C0A4 /* S3Kit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6897DC9015BEF65F0020C0A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6897DC8F15BEF65F0020C0A4 /* Foundation.framework */; };
 		6897DC9E15BEF65F0020C0A4 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6897DC9D15BEF65F0020C0A4 /* SenTestingKit.framework */; };
 		6897DCA015BEF65F0020C0A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6897DC9F15BEF65F0020C0A4 /* UIKit.framework */; };
@@ -15,7 +24,7 @@
 		6897DCAA15BEF65F0020C0A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6897DCA815BEF65F0020C0A4 /* InfoPlist.strings */; };
 		6897DCBA15BEF6F00020C0A4 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 6897DCB615BEF6F00020C0A4 /* NSData+Base64.h */; };
 		6897DCBB15BEF6F00020C0A4 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6897DCB715BEF6F00020C0A4 /* NSData+Base64.m */; };
-		6897DCBD15BEF6F00020C0A4 /* BS3Request.h in Headers */ = {isa = PBXBuildFile; fileRef = 6897DCB815BEF6F00020C0A4 /* BS3Request.h */; };
+		6897DCBD15BEF6F00020C0A4 /* BS3Request.h in Headers */ = {isa = PBXBuildFile; fileRef = 6897DCB815BEF6F00020C0A4 /* BS3Request.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6897DCBE15BEF6F00020C0A4 /* BS3Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 6897DCB915BEF6F00020C0A4 /* BS3Request.m */; };
 		6897DCBF15BEF6F00020C0A4 /* BS3Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 6897DCB915BEF6F00020C0A4 /* BS3Request.m */; };
 		6897DCC215BEF7270020C0A4 /* BS3RequestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6897DCC115BEF7270020C0A4 /* BS3RequestTests.m */; };
@@ -34,6 +43,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		685E1F9B15BF91130074250A /* BS3Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BS3Response.h; sourceTree = "<group>"; };
+		685E1F9C15BF91130074250A /* BS3Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BS3Response.m; sourceTree = "<group>"; };
+		685E1F9D15BF91130074250A /* BS3Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BS3Parser.h; sourceTree = "<group>"; };
+		685E1F9E15BF91130074250A /* BS3Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BS3Parser.m; sourceTree = "<group>"; };
+		685E1FA615BF91350074250A /* BS3ResponseTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BS3ResponseTests.h; sourceTree = "<group>"; };
+		685E1FA715BF91350074250A /* BS3ResponseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BS3ResponseTests.m; sourceTree = "<group>"; };
+		685E1FA915BF91500074250A /* BS3ParserTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BS3ParserTests.h; sourceTree = "<group>"; };
+		685E1FAA15BF91500074250A /* BS3ParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BS3ParserTests.m; sourceTree = "<group>"; };
 		6897DC8C15BEF65F0020C0A4 /* libS3Kit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libS3Kit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6897DC8F15BEF65F0020C0A4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6897DC9315BEF65F0020C0A4 /* S3Kit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "S3Kit-Prefix.pch"; sourceTree = "<group>"; };
@@ -111,6 +128,10 @@
 			children = (
 				6897DCB615BEF6F00020C0A4 /* NSData+Base64.h */,
 				6897DCB715BEF6F00020C0A4 /* NSData+Base64.m */,
+				685E1F9B15BF91130074250A /* BS3Response.h */,
+				685E1F9C15BF91130074250A /* BS3Response.m */,
+				685E1F9D15BF91130074250A /* BS3Parser.h */,
+				685E1F9E15BF91130074250A /* BS3Parser.m */,
 				6897DCB815BEF6F00020C0A4 /* BS3Request.h */,
 				6897DCB915BEF6F00020C0A4 /* BS3Request.m */,
 				6897DC9415BEF65F0020C0A4 /* S3Kit.h */,
@@ -132,6 +153,10 @@
 			children = (
 				6897DCC015BEF7270020C0A4 /* BS3RequestTests.h */,
 				6897DCC115BEF7270020C0A4 /* BS3RequestTests.m */,
+				685E1FA615BF91350074250A /* BS3ResponseTests.h */,
+				685E1FA715BF91350074250A /* BS3ResponseTests.m */,
+				685E1FA915BF91500074250A /* BS3ParserTests.h */,
+				685E1FAA15BF91500074250A /* BS3ParserTests.m */,
 				6897DCA615BEF65F0020C0A4 /* Supporting Files */,
 			);
 			path = S3KitTests;
@@ -155,6 +180,9 @@
 			files = (
 				6897DCBA15BEF6F00020C0A4 /* NSData+Base64.h in Headers */,
 				6897DCBD15BEF6F00020C0A4 /* BS3Request.h in Headers */,
+				685E1F9F15BF91130074250A /* BS3Response.h in Headers */,
+				685E1FA215BF91130074250A /* BS3Parser.h in Headers */,
+				685E1FAC15BF92C00074250A /* S3Kit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +286,8 @@
 			files = (
 				6897DCBB15BEF6F00020C0A4 /* NSData+Base64.m in Sources */,
 				6897DCBE15BEF6F00020C0A4 /* BS3Request.m in Sources */,
+				685E1FA015BF91130074250A /* BS3Response.m in Sources */,
+				685E1FA315BF91130074250A /* BS3Parser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +298,10 @@
 				6897DCBF15BEF6F00020C0A4 /* BS3Request.m in Sources */,
 				6897DCC215BEF7270020C0A4 /* BS3RequestTests.m in Sources */,
 				6897DCC515BEF8B00020C0A4 /* NSData+Base64.m in Sources */,
+				685E1FA115BF91130074250A /* BS3Response.m in Sources */,
+				685E1FA415BF91130074250A /* BS3Parser.m in Sources */,
+				685E1FA815BF91350074250A /* BS3ResponseTests.m in Sources */,
+				685E1FAB15BF91500074250A /* BS3ParserTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +377,7 @@
 				GCC_PREFIX_HEADER = "S3Kit/S3Kit-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -355,6 +390,7 @@
 				GCC_PREFIX_HEADER = "S3Kit/S3Kit-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -408,6 +444,7 @@
 				6897DCB215BEF65F0020C0A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6897DCB315BEF65F0020C0A4 /* Build configuration list for PBXNativeTarget "S3KitTests" */ = {
 			isa = XCConfigurationList;
@@ -416,6 +453,7 @@
 				6897DCB515BEF65F0020C0A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
