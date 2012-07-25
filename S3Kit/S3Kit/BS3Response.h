@@ -10,14 +10,14 @@
 
 @class BS3Parser;
 
-@interface BS3Response : NSObject
+@interface BS3Response : NSHTTPURLResponse
 
-@property (nonatomic, strong) NSHTTPURLResponse *httpResponse;
-@property (nonatomic, readonly) NSDictionary *responseDictionary;
-@property (nonatomic, strong) NSError *responseError;
-@property (nonatomic, readonly) NSString *responseType;
+@property (nonatomic, readonly) NSData *data;
+@property (nonatomic, readonly) NSDictionary *dataDictionary;
+@property (nonatomic, readonly) NSError *error;
+@property (nonatomic, readonly) NSString *type;
 @property (nonatomic, strong) BS3Parser *parser;
 
-- (id)initWithHTTPResponse:(NSHTTPURLResponse *)httpResponse data:(NSData *)responseData error:(NSError *)error;
+- (id)initWithHTTPResponse:(NSHTTPURLResponse *)response data:(NSData *)data error:(NSError *)error;
 
 @end

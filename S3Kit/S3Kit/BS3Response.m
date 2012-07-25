@@ -11,12 +11,10 @@
 
 static NSDateFormatter *_s3DateFormat;
 
-@implementation BS3Response {
-    NSData *_responseData;
-}
+@implementation BS3Response
 @synthesize parser;
-@synthesize httpResponse = _httpResponse, responseError = _responseError;
-@synthesize responseDictionary = _responseDictionary, responseType = _responseType;
+@synthesize data = _data, error = _error;
+@synthesize dataDictionary = _dataDictionary, type = _type;
 
 + (NSDictionary *)parseBucket:(NSDictionary *)rawDict {
     NSDate *creationDate = [_s3DateFormat dateFromString:[rawDict objectForKey:@"CreationDate"]];
@@ -79,39 +77,38 @@ static NSDateFormatter *_s3DateFormat;
     return formattedDict;
 }
 
-- (id)initWithHTTPResponse:(NSHTTPURLResponse *)httpResponse data:(NSData *)responseData error:(NSError *)error {
-    self = [super init];
+- (id)initWithHTTPResponse:(NSHTTPURLResponse *)response data:(NSData *)data error:(NSError *)error {
+    self = [super initWithURL:response.URL statusCode:response.statusCode HTTPVersion:@"1.1" headerFields:response.allHeaderFields];
     if (self) {
-        if(!_s3DateFormat) {
-            static dispatch_once_t oncePredicate;
-            dispatch_once(&oncePredicate, ^{
-                _s3DateFormat = [[NSDateFormatter alloc] init];
-                _s3DateFormat.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
-                _s3DateFormat.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];
-                _s3DateFormat.dateFormat = @"yyyy-MM-dd'T'HH':'mm':'ss'.000Z'";
-            });
-        }
-        self.httpResponse = httpResponse;
-        _responseData = responseData;
-        self.responseError = error;
+        _data = data;
+        _error = error;
         self.parser = [[BS3Parser alloc] init];
     }
     return self;
 }
 
-- (NSDictionary *)responseDictionary {
-    if (!_responseDictionary && _responseData) {
-        NSDictionary *rawDictionary = [self.parser dictionaryWithData:_responseData];
-        _responseDictionary = [BS3Response formattedDictionaryWithParsedDictionary:rawDictionary];
+- (NSDictionary *)dataDictionary {
+    if(!_s3DateFormat) {
+        static dispatch_once_t oncePredicate;
+        dispatch_once(&oncePredicate, ^{
+            _s3DateFormat = [[NSDateFormatter alloc] init];
+            _s3DateFormat.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+            _s3DateFormat.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];
+            _s3DateFormat.dateFormat = @"yyyy-MM-dd'T'HH':'mm':'ss'.000Z'";
+        });
     }
-    return _responseDictionary;
+    if (!_dataDictionary && _data) {
+        NSDictionary *rawDictionary = [self.parser dictionaryWithData:_data];
+        _dataDictionary = [BS3Response formattedDictionaryWithParsedDictionary:rawDictionary];
+    }
+    return _dataDictionary;
 }
 
 - (NSString *)responseType {
-    if (!_responseType) {
-        _responseType = [self.responseDictionary objectForKey:@"type"];
+    if (!_type) {
+        _type = [self.dataDictionary objectForKey:@"type"];
     }
-    return _responseType;
+    return _type;
 }
 
 @end
